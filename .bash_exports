@@ -1,0 +1,22 @@
+#export FEDORA_HOME=~/local/fedora-commons-3.6.2
+#export TERM=xterm-256color # Used to be xterm-new
+#export CATALINA_HOME=/Users/ntrive/local/apache-tomcat-8.5.9
+
+export EDITOR=emacs
+export TERM=screen-256color # Trying to fix major lag issues on Sierra
+export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33'
+export PS1='\h:\W \u\$ '
+
+#export PATH=$PATH:/usr/bin/java:$FEDORA_HOME/client/bin:$FEDORA_HOME/server/bin:/opt/local/lib/postgresql93/bin
+#export PATH=$PATH:/Users/ntrive/Documents/DAMS/deployment/gradle-1.11/bin
+#export PATH=$PATH:/opt/local/lib/mysql57/bin:$PYTHONHOME/site-packages/django/bin
+#PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+PATH=$PATH:/Users/ntrive/.composer/vendor/bin
+PATH=$PATH:./vendor/bin
+PATH="$(brew --prefix php@7.1)/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/bin:$PATH"
+PATH="/Users/ntrive/bin:$PATH"
+export PATH
