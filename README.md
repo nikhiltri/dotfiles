@@ -1,4 +1,4 @@
-# .files
+# .dotfiles
 
 At long last, a consolidated place where I can keep the custom configurations
 I make on my development machines. I use repo this to keep track of changes I make
