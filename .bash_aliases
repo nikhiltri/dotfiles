@@ -1,13 +1,3 @@
-#alias yii='/Users/ntrive/local/yii-1.1.12.b600af/framework/yiic'
-#alias egrep='egrep -ir -C2 -n --exclude="*~" --color=auto '
-#alias apachectl='sudo apachectl '
-#alias tomcat='sudo /opt/local/share/java/tomcat6/bin/tomcatctl'
-#alias pg_ctl='sudo -u postgres /opt/local/lib/postgresql93/bin/pg_ctl -D /opt/local/var/db/postgresql93/defaultdb'
-#alias mysqldump='/opt/local/bin/mysqldump5'
-#alias php='/opt/local/bin/php'
-#alias bfg='java -jar bfg-1.11.7.jar'
-#alias phpunit='/usr/local/bin/phpunit --colors=always'
-
 alias ls='ls -Gla '
 alias emacs='emacs -nw'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy; echo '¯\_(ツ)_/¯'";
