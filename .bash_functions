@@ -12,7 +12,7 @@ function mkcdir ()
 }
 
 # Load RVM into a shell session *as a function*
-# Not sure what this does, but it solved some issues with running rvm and rackup
+# Automatically added by `rvm` installer
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # iTerm2 shell integration

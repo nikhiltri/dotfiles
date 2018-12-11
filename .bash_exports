@@ -16,7 +16,11 @@ PATH=$PATH:/Users/ntrive/.composer/vendor/bin
 PATH=$PATH:./vendor/bin
 PATH="$(brew --prefix php@7.1)/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/bin:$PATH"
 PATH="/Users/ntrive/bin:$PATH"
+
+# Add RVM to PATH for scripting
+# Automatically added by `rvm` installer
+PATH=$PATH:$HOME/.rvm/bin
+
 export PATH

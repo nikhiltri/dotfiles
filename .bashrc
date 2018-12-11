@@ -12,4 +12,3 @@ fi
 if [ -f ~/.bash_functions ]; then
     source ~/.bash_functions
 fi
-
