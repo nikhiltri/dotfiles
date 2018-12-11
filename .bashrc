@@ -1,3 +1,8 @@
+# Import colors
+if [ -f ~/.bash_colors ]; then
+    source ~/.bash_colors
+fi
+
 # Import aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases

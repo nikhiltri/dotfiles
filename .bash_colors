@@ -1,0 +1,28 @@
+function format_color() {
+    if [ "${2}" == "bg" ]
+    then
+        printf "\001\e[48;5;${1}m\002"
+    else
+        printf "\001\e[38;5;${1}m\002"
+    fi
+}
+
+COLOR_EMPTY="\0"
+COLOR_DEFAULT="\001\e[0m\002"
+COLOR_BLACK=$(format_color 000)
+COLOR_BLACK_BG=$(format_color 000 bg)
+
+COLOR_RED=$(format_color 088)
+COLOR_RED_BG=$(format_color 088 bg)
+
+COLOR_ORANGE=$(format_color 172)
+COLOR_ORANGE_BG=$(format_color 172 bg)
+
+COLOR_GREEN=$(format_color 034)
+COLOR_GREEN_BG=$(format_color 034 bg)
+
+COLOR_CYAN=$(format_color 032)
+COLOR_CYAN_BG=$(format_color 032 bg)
+
+COLOR_BLUE=$(format_color 020)
+COLOR_BLUE_BG=$(format_color 020 bg)

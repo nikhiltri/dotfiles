@@ -24,3 +24,6 @@ PATH="/Users/ntrive/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin
 
 export PATH
+
+PS1=$(show_ps1)
+w
