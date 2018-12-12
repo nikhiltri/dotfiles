@@ -23,8 +23,14 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 ## All this magic borrows from https://github.com/vybeauregard/promptworks
 # Get weather for CLI
 w() {
-     local zip_code=60603;
-     curl http://wttr.in/${zip_code}?0?Q
+    # Check if a local cached file exists and it was updated in the last hour
+    if [ ! -f ~/.weather ] || [ `find ~/.weather -mmin +60` ]; then
+	local zip_code=60603;
+	curl http://wttr.in/${zip_code}?0?Q --output ~/.weather --silent
+    fi
+
+    # Print the local cache of weather data
+    cat ~/.weather
 }
 
 show_git_position() {
