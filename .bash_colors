@@ -1,9 +1,9 @@
 function format_color() {
     if [ "${2}" == "bg" ]
     then
-        printf "\001\e[48;5;${1}m\002"
+	printf "\001\e[48;5;${1}m\002"
     else
-        printf "\001\e[38;5;${1}m\002"
+	printf "\001\e[38;5;${1}m\002"
     fi
 }
 
