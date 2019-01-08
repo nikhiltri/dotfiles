@@ -120,4 +120,8 @@
 (yas-global-mode 1)
 
 
+;; Add `drupal-mode` for Drupal exntesioned files
+(add-to-list 'auto-mode-alist '("\\.\\(module\\|test\\|install\\|theme\\)$" . drupal-mode))
+(add-to-list 'auto-mode-alist '("\\.info" . conf-windows-mode))
+
 ;;; .emacs ends here
