@@ -25,7 +25,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(yasnippet-snippets yasnippet multiple-cursors emojify ## web-mode-edit-element smart-tabs-mode project-explorer pbcopy markdown-preview-mode json-mode js2-mode flycheck f exec-path-from-shell drupal-mode auto-complete apib-mode)))
+   '(processing-mode yasnippet-snippets yasnippet multiple-cursors emojify ## web-mode-edit-element smart-tabs-mode project-explorer pbcopy markdown-preview-mode json-mode js2-mode flycheck f exec-path-from-shell drupal-mode auto-complete apib-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -123,5 +123,22 @@
 ;; Add `drupal-mode` for Drupal exntesioned files
 (add-to-list 'auto-mode-alist '("\\.\\(module\\|test\\|install\\|theme\\)$" . drupal-mode))
 (add-to-list 'auto-mode-alist '("\\.info" . conf-windows-mode))
+
+
+;; Add Processing directives
+(setq processing-location "/usr/local/bin/processing-java")
+(setq processing-application-dir "/Applications/Processing\ 2.app")
+(setq processing-sketchbook-dir "~/Documents/Processing")
+
+(defun processing-mode-init ()
+  (make-local-variable 'ac-sources)
+  (setq ac-sources '(ac-source-dictionary ac-source-yasnippet))
+  (make-local-variable 'ac-user-dictionary)
+  (setq ac-user-dictionary (append processing-functions
+                                   processing-builtins
+                                   processing-constants)))
+
+(add-to-list 'ac-modes 'processing-mode)
+(add-hook 'processing-mode-hook 'processing-mode-init)
 
 ;;; .emacs ends here
