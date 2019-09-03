@@ -21,17 +21,30 @@ git clone git@github.com:nikhiltri/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-When starting on a new machine, take a look at the existing dot files that are duplicated
-from this repo to make sure there's not anything useful that you'd like to keep. If there's
-not, `rm` any of those dupe files, then simply run:
+When starting on a new machine, you might have a lot of stuff already in your bash dotfiles.
+To keep all that stuff in place, but add these customizations on top of it all, add this to
+the bottom of your `~/.bashrc` so that it runs at the very end your session bootstrap:
 
 ```
-./install.sh
+if [ -f ~/.dotfiles/.bashrc ]; then
+    cd ~/.dotfiles
+    . .bashrc
+    cd ~/
+fi
 ```
 
-This will create a series of symlinks to the dot files in your home directory. These settings
-will automatically load when you open up a new terminal window. To load up all the values in
-your current session, you can:
+This will dip into your dotfiles directory `source` all your custom dotfiles, that come back out
+again.
+
+For the remaining dotfiles, check to make sure there aren't any existing files you'll be clobbering,
+then add a few symlinks:
+
+```
+ln -s ~/.dotfiles/.emacs ~
+ln -s ~/.dotfiles/.ignore ~
+```
+
+ To refresh your current session, you can:
 
 ```
 source ~/.bashrc
