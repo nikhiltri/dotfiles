@@ -6,9 +6,9 @@ over time, and to make working on a new system easier.
 
 ## Summary
 
-At the moment this includes only a handful of dot files. Mostly `bash` shortcuts since
+At the moment this includes only a handful of dotfiles. Mostly `bash` shortcuts since
 most of my development time is on the command line. But also my `.emacs` which has evolved
-a _lot_ ever the years, and finally has a place where I can track changes. And finally
+a _lot_ over the years, and finally has a place where I can track changes. And finally,
 an `.ignore` file which is honored by a few command-line search tools, including Silver
 Searcher, which has been the one I've been using as of late.
 
