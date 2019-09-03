@@ -1,5 +1,7 @@
 # .dotfiles
 
+> README last updated on September 3, 2019
+
 At long last, a consolidated place where I can keep the custom configurations
 I make on my development machines. I use repo this to keep track of changes I make
 over time, and to make working on a new system easier.
@@ -55,3 +57,4 @@ source ~/.bashrc
 Periodically you should do a `git status` from `~/.dotfiles` just to see if there are any changes
 you made that didn't get committed. I set a repeating event in my calendar to check every quarter.
 Ooooh! Maybe I'll change the event to coincide with equinoxes and solstices!
+
