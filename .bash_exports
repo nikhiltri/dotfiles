@@ -20,4 +20,3 @@ PATH="$(brew --prefix php@7.1)/bin:$PATH"
 export PATH
 
 PS1=$(show_ps1)
-w
