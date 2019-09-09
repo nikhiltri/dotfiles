@@ -1,6 +1,6 @@
 # .dotfiles
 
-> README last updated on September 3, 2019
+_README last updated on September 9, 2019_
 
 At long last, a consolidated place where I can keep the custom configurations
 I make on my development machines. I use repo this to keep track of changes I make
@@ -45,10 +45,17 @@ ln -s ~/.dotfiles/.emacs ~
 ln -s ~/.dotfiles/.ignore ~
 ```
 
- To refresh your current session, you can:
+To refresh your current session, you can:
 
 ```
 source ~/.bashrc
+```
+
+Open up emacs and install all the packages in the `.emacs` file:
+
+```
+emacs
+M-x package-install-selected-packages
 ```
 
 ## Maintain
