@@ -20,7 +20,6 @@ First, clone the repo in your home directory:
 
 ```
 git clone git@github.com:nikhiltri/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
 ```
 
 When starting on a new machine, you might have a lot of stuff already in your bash dotfiles.
@@ -30,7 +29,7 @@ the bottom of your `~/.bashrc` so that it runs at the very end your session boot
 ```
 if [ -f ~/.dotfiles/.bashrc ]; then
     cd ~/.dotfiles
-    . .bashrc
+	source .bashrc
     cd ~/
 fi
 ```
