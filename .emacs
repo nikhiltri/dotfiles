@@ -25,7 +25,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(processing-mode yasnippet-snippets yasnippet multiple-cursors emojify ## web-mode-edit-element smart-tabs-mode project-explorer pbcopy markdown-preview-mode json-mode js2-mode flycheck f exec-path-from-shell drupal-mode auto-complete apib-mode)))
+   '(php-cs-fixer editorconfig processing-mode yasnippet-snippets yasnippet multiple-cursors emojify ## web-mode-edit-element smart-tabs-mode project-explorer pbcopy markdown-preview-mode json-mode js2-mode flycheck f exec-path-from-shell drupal-mode auto-complete apib-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -86,6 +86,11 @@
 (editorconfig-mode 1)
 
 
+;; Run PHP-CS-Fixer before saving PHP files
+(require 'php-cs-fixer)
+(add-hook 'before-save-hook 'php-cs-fixer-before-save)
+
+
 ;; Syntax checking (http://www.flycheck.org/en/latest/)
 (require 'flycheck)
 (global-flycheck-mode)
@@ -118,6 +123,10 @@
 
 ;; Yas snippets
 (yas-global-mode 1)
+
+
+;; Explicitly set to use default bash shell
+(setq-default shell-file-name "/bin/bash")
 
 
 ;; Add `drupal-mode` for Drupal exntesioned files

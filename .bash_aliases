@@ -4,6 +4,7 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy; echo '¯\_(ツ)_/¯'";
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias finder="open -a 'Finder' ."
 alias agmore="ag --pager 'more -R'"
+alias lint="php-cs-fixer fix --allow-risky=yes --diff --diff-format udiff"
 
 # Older versions of PHP, when needed
 alias php56='/usr/local/Cellar/php56/5.6.30_6/bin/php'
