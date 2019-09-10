@@ -46,7 +46,27 @@ function show_git_position() {
 	"" )
 	    return ;;
 	* )
-	    printf "${COLOR_ORANGE}${COLOR_BLACK_BG}${current_git_repo}${COLOR_GREEN}.${current_git_branch}${COLOR_DEFAULT}";;
+	    printf "${COLOR_ORANGE}${COLOR_BLACK_BG}${current_git_repo}${COLOR_GREEN}⎇ ${current_git_branch}${COLOR_DEFAULT}";;
+    esac
+}
+
+##
+# Show git status
+function show_git_status() {
+    local current_git_repo=$(git config --get remote.origin.url | sed 's/.git//g' | sed 's/.*\///')
+    case ${current_git_repo} in
+	"" )
+	    printf "◉";;
+	* )
+	    git diff --no-ext-diff --quiet || w="◉"
+
+	    printf " ";
+	    if [ -z "$w" ]
+	    then
+		printf "◉";
+	    else
+		printf "${COLOR_GREEN}${w}${COLOR_DEFAULT}";
+	    fi
     esac
 }
 
@@ -95,6 +115,6 @@ current_dir() {
 # Print cursor prompt
 show_ps1 () {
     local host="\h"
-    local dir="\$(current_dir)\$(show_git_position)"
-    printf "${host}:${dir}\$ "
+    local dir="\$(current_dir)\$(show_git_position)\$(show_git_status)"
+    printf "${host}:${dir} "
 }
