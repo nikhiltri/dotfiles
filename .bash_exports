@@ -15,8 +15,8 @@ PATH="/Users/ntrive/.rvm/gems/ruby-2.3.1/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin
 
 # Add homebrew packages to path
-which brew
-test $? -ne 0 || PATH="$(brew --prefix php@7.1)/bin:$PATH"
+which brew &> /dev/null
+test $? -ne 0 || PATH="$(brew --prefix php@7.2)/bin:$PATH"
 
 export PATH
 
