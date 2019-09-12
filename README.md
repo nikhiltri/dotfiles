@@ -28,9 +28,10 @@ the bottom of your `~/.bashrc` so that it runs at the very end your session boot
 
 ```
 if [ -f ~/.dotfiles/.bashrc ]; then
+    CUR=$(pwd)
     cd ~/.dotfiles
 	source .bashrc
-    cd ~/
+    cd $CUR
 fi
 ```
 
