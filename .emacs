@@ -150,4 +150,8 @@
 (add-to-list 'ac-modes 'processing-mode)
 (add-hook 'processing-mode-hook 'processing-mode-init)
 
+;; Follow symlinks to a version controlled file
+(setq vc-follow-symlinks t)
+
+
 ;;; .emacs ends here
