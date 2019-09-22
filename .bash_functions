@@ -29,8 +29,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 function w() {
     # Check if a local cached file exists and it was updated in the last hour
     if [ ! -f ~/.weather ] || [ `find ~/.weather -mmin +60` ]; then
-	local zip_code=60603;
-	curl http://wttr.in/${zip_code}?0?Q --output ~/.weather --silent
+	curl http://wttr.in/?format="%l:+%c++%t+%m" --output ~/.weather --silent
     fi
 
     # Print the local cache of weather data
