@@ -40,11 +40,11 @@ function w() {
 # Show git branch and repo
 function show_git_position() {
     local current_git_repo=$(git config --get remote.origin.url | sed 's/.git//g' | sed 's/.*\///')
-    local current_git_branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
     case ${current_git_repo} in
 	"" )
 	    return ;;
 	* )
+	    local current_git_branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 	    printf "${COLOR_ORANGE}${COLOR_BLACK_BG}${current_git_repo}${COLOR_GREEN}⎇ ${current_git_branch}${COLOR_DEFAULT}";;
     esac
 }
