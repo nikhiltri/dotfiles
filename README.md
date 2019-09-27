@@ -59,6 +59,26 @@ emacs
 M-x package-install-selected-packages
 ```
 
+## Customize your enviroment
+
+This package provides a few functions you can add to your `~/.bashrc` to customize you terminal
+environment.
+
+```
+PS1=$(show_ps1)
+```
+
+This runs the `show_ps1` function to customize your command prompt. If your current directory is a Git
+repo, it will show you the name of the repo, the branch that you're on, and provide an icon indicating
+whether any files have changes.
+
+```
+w
+```
+
+This will display the local weather each time you load up a new terminal.
+
+
 ## Maintain
 
 Periodically you should do a `git status` from `~/.dotfiles` just to see if there are any changes
