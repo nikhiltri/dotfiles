@@ -78,7 +78,7 @@
   '(auto-cleanup warn-read-only))
 (setq whitespace-style
   '(face trailing tabs lines-tail indentation::space ))
-(setq whitespace-line-column 120)
+(setq whitespace-line-column 80)
 
 
 ;; Use editorconfig on projects
