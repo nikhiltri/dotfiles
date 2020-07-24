@@ -27,7 +27,7 @@ alias nope='git reset --hard; git clean -df;'
 
 # Laravel shortcuts
 alias artisan='php artisan'
-alias migrate='php artisan migrate'
+alias migrate='php artisan migrate --step'
 alias tinker='php artisan tinker'
 alias p='phpunit'
 alias pf='phpunit --filter'
