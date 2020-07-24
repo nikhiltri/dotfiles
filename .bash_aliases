@@ -34,3 +34,5 @@ alias pf='phpunit --filter'
 alias ccclear='php artisan cache:clear; php artisan config:clear; php artisan view:clear; php artisan route:clear;'
 alias cdo='composer dump-autoload -o'
 alias tl='tail -f -n 450 storage/logs/laravel*.log | grep -i -E "^\[\d{4}\-\d{2}\-\d{2} \d{2}:\d{2}:\d{2}\]|Next [\w\W]+?\:" --color'
+
+alias aicbash='./aic.sh --ratio 150'
